@@ -1,5 +1,44 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.header {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(375px, 1fr));
+  grid-row: 3;
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.header__lamp {
+  justify-self: end;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  font-weight: 700;
+  text-align: left;
+  justify-self: start;
+  padding: 0 5vi;
+}
+
+.header__text {
+  background-color: #ff0070;
+  justify-self: start;
+  padding: 0 5vi;
+}
+
+.header__text-paragraph {
+  font-family: IBM Plex Mono;
+  font-size: clamp(1rem, 0.9269rem + 0.3096vw, 1.125rem);
+  font-weight: 700;
+  text-align: left;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
