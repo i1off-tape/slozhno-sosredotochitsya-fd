@@ -23,13 +23,13 @@
   font-weight: 700;
   text-align: left;
   justify-self: start;
-  padding: 0 5vi;
+  margin: 0 10px;
 }
 
 .header__text {
   background-color: #ff0070;
   justify-self: start;
-  padding: 0 5vi;
+  margin: 0 10px;
 }
 
 .header__text-paragraph {
