@@ -5,4 +5,5 @@
 :root {
   --accent-color: #ff0070;
   --title-color: #db00ff;
+  --background-image: url("../images/cover-image-dark.png");
 }

@@ -4,15 +4,57 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(375px, 1fr));
   grid-row: 3;
-  background-image: url(../images/cover-image-dark.png);
+  position: relative;
 }
 
 .header__lamp {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px 0 0;
+  gap: 10px;
   justify-self: end;
 }
 
+.header__lamp-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1rem, 0.9269rem + 0.3096vw, 1.125rem);
+  color: #ff0070;
+  margin: 1px 2px 0 0;
+}
+
+.header__lamp-dot {
+  background-color: #ff0070;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px #ff0070;
+  margin: 0 0 0 0;
+}
+
 .header__theme-menu {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1rem, 0.9269rem + 0.3096vw, 1.125rem);
   justify-self: end;
+  margin: 42px 10px 0 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.header__theme-menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  padding: 0px 13px;
+  letter-spacing: 0.05rem;
 }
 
 .header__title {
@@ -23,22 +65,198 @@
   font-weight: 700;
   text-align: left;
   justify-self: start;
-  margin: 0 10px;
+  line-height: 82.5%;
+  margin: 69px 10px 55px 10px;
 }
 
 .header__text {
-  background-color: #ff0070;
   justify-self: start;
-  margin: 0 10px;
+  margin: 0 10px 66px 10px;
+}
+
+.title-decor {
+  background-color: #ff0070;
 }
 
 .header__text-paragraph {
-  font-family: IBM Plex Mono;
-  font-size: clamp(1rem, 0.9269rem + 0.3096vw, 1.125rem);
-  font-weight: 700;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23.4px;
+  color: black;
   text-align: left;
+}
+
+.header__corner {
+  position: absolute;
+  margin: 10px;
+}
+
+.header__corner_type_top-right {
+  top: 0;
+  right: 0;
+}
+
+.header__corner_type_top-right::before,
+.header__corner_type_top-right::after {
+  content: "";
+  position: absolute;
+  background-color: #ff0070;
+}
+
+/* Горизонтальная полоска */
+.header__corner_type_top-right::before {
+  width: 25px; /* длина полоски */
+  height: 1px; /* толщина */
+  top: 0;
+  right: 0;
+}
+
+/* Вертикальная полоска */
+.header__corner_type_top-right::after {
+  width: 1px;
+  height: 25px;
+  top: 0;
+  right: 0;
+}
+
+/* --- Уголок в нижнем левом углу --- */
+.header__corner_type_bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.header__corner_type_bottom-left::before,
+.header__corner_type_bottom-left::after {
+  content: "";
+  position: absolute;
+  background-color: #ff0070;
+}
+
+/* Горизонтальная полоска */
+.header__corner_type_bottom-left::before {
+  width: 25px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+/* Вертикальная полоска */
+.header__corner_type_bottom-left::after {
+  width: 1px;
+  height: 25px;
+  bottom: 0;
+  left: 0;
 }
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--background-image); /* Подставляем переменную */
+  background-position: center; /* Центрируем изображение */
+  background-size: cover; /* Растягиваем на весь экран */
+  background-repeat: no-repeat; /* Отключаем повторение */
+  background-attachment: fixed; /* Фиксируем фон */
+  background-color: #000028; /* Цвет фона, если изображение не загрузилось */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 40px 10px;
+}
+
+.images-gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка по умолчанию */
+  gap: 10px; /* Расстояние между изображениями */
+  width: 100%;
+  max-width: 1024px; /* Ограничиваем ширину */
+  margin: 0 auto; /* Центрируем */
+}
+
+.images-gallery img {
+  width: 100%; /* Заполняет родительскую колонку */
+  height: auto;
+  object-fit: cover; /* Обрезает края, если нужно */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 10px;
+  min-height: 668px;
+}
+
+.footer_title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--title-color);
+  font-weight: 700;
+  text-align: center;
+}
+
+.footer__corner {
+  position: absolute;
+  margin: 10px 0;
+}
+
+.footer__corner_type_top-right {
+  top: 0;
+  right: 0;
+}
+
+.footer__corner_type_top-right::before,
+.footer__corner_type_top-right::after {
+  content: "";
+  position: absolute;
+  background-color: #ff0070;
+}
+
+/* Горизонтальная полоска */
+.footer__corner_type_top-right::before {
+  width: 25px; /* длина полоски */
+  height: 1px; /* толщина */
+  top: 0;
+  right: 0;
+}
+
+/* Вертикальная полоска */
+.footer__corner_type_top-right::after {
+  width: 1px;
+  height: 25px;
+  top: 0;
+  right: 0;
+}
+
+/* --- Уголок в нижнем левом углу --- */
+.footer__corner_type_bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.footer__corner_type_bottom-left::before,
+.footer__corner_type_bottom-left::after {
+  content: "";
+  position: absolute;
+  background-color: #ff0070;
+}
+
+/* Горизонтальная полоска */
+.footer__corner_type_bottom-left::before {
+  width: 25px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+
+/* Вертикальная полоска */
+.footer__corner_type_bottom-left::after {
+  width: 1px;
+  height: 25px;
+  bottom: 0;
+  left: 0;
 }
