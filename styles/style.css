@@ -5,6 +5,8 @@
   grid-template-columns: repeat(1, minmax(375px, 1fr));
   grid-row: 3;
   position: relative;
+  height: auto;
+  min-height: 100vh;
 }
 
 .header__lamp {
@@ -100,8 +102,9 @@
 }
 
 .header__text {
-  justify-self: start;
+  justify-self: flex-start;
   margin: 0 10px 66px 10px;
+  max-height: 117px;
 }
 
 .title-decor {
@@ -255,7 +258,8 @@
   align-items: center;
   position: relative;
   margin: 10px 10px 0 10px;
-  min-height: 668px;
+  height: auto;
+  min-height: 100vh;
 }
 
 .footer__title {
