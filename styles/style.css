@@ -166,7 +166,45 @@
   margin: 40px 10px;
 }
 
-.images-gallery {
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 23px;
+  color: #ff0070;
+}
+
+.content__article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__article-title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 700;
+  color: #000028;
+}
+
+.content__article-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  color: #f1b2ce;
+  line-height: 23.42px;
+}
+
+.content__images-gallery {
   display: grid;
   grid-template-columns: 1fr; /* Одна колонка по умолчанию */
   gap: 10px; /* Расстояние между изображениями */
@@ -175,7 +213,7 @@
   margin: 0 auto; /* Центрируем */
 }
 
-.images-gallery img {
+.content__images-gallery img {
   width: 100%; /* Заполняет родительскую колонку */
   height: auto;
   object-fit: cover; /* Обрезает края, если нужно */
@@ -190,7 +228,7 @@
   min-height: 668px;
 }
 
-.footer_title {
+.footer__title {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 2px 2px 0 var(--accent-color);
