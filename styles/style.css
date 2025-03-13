@@ -271,7 +271,6 @@
 
   .content__section:nth-child(4) {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
   }
 }
 
@@ -417,13 +416,17 @@
 }
 
 .footer {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 10px 10px 0 10px;
   height: auto;
   min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .footer {
+  }
 }
 
 .footer__title {
@@ -437,7 +440,13 @@
 
 .footer__corner {
   position: absolute;
-  margin: 10px 0;
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .footer__corner {
+    margin: 20px;
+  }
 }
 
 .footer__corner_type_top-right {
