@@ -15,6 +15,10 @@
   --article-title-color: #000028;
   --background-image: url("../images/cover-image-dark.png");
   --corner-color: #ff0070;
+  --font-family: "IBM Plex Mono", sans-serif;
+  --font-size-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-title-pc: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-size-text-universal: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,10 +30,10 @@
     --active-accent-color: #353430;
     --focus-accent-color: #353430;
     --title-color: #ffc2e6;
-    --background-color: #ffffff;
+    --background-color: #fff1f7;
     --text-color: #353430;
     --article-title-color: #353430;
-    --background-image: url("../images/cover-image.png");
+    --background-image: url("../images/cover-image-light.png");
     --corner-color: #353430;
   }
 }
