@@ -299,6 +299,10 @@
   gap: 10px;
 }
 
+.content__article h4 {
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
   .content__article {
     grid-column: 2;
