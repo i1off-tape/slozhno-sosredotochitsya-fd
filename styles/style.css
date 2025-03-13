@@ -6,8 +6,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   position: relative;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   max-width: 100%;
 }
@@ -422,11 +421,6 @@
   position: relative;
   height: auto;
   min-height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .footer {
-  }
 }
 
 .footer__title {
