@@ -141,6 +141,13 @@
 
 .title-decor {
   background-color: var(--accent-color);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .title-decor {
+    width: auto;
+  }
 }
 
 .header__text-paragraph {
@@ -314,6 +321,15 @@
   font-weight: 400;
   color: var(--text-color);
   line-height: 23.42px;
+}
+
+.content__span-title {
+  font-family: var(--font-family);
+  font-size: var(--font-size-text-universal);
+  font-style: normal;
+  font-weight: 700;
+  color: var(--article-title-color);
+  margin-bottom: 10px;
 }
 
 .content__article-link {
