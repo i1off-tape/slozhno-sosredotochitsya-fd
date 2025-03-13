@@ -20,16 +20,16 @@
 .header__lamp-text {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: clamp(1rem, 0.9269rem + 0.3096vw, 1.125rem);
-  color: #ff0070;
+  color: var(--accent-color);
   margin: 1px 2px 0 0;
 }
 
 .header__lamp-dot {
-  background-color: #ff0070;
+  background-color: var(--accent-color);
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px #ff0070;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
   margin: 0 0 0 0;
 }
 
@@ -60,7 +60,7 @@
   margin: 0; /* Сбрасываем внешние отступы */
   padding: 0 13px; /* Сбрасываем внутренние отступы */
   font: inherit; /* Наследуем шрифт родительского элемента */
-  color: #ff0070; /* Наследуем цвет текста */
+  color: var(--nav-text-color); /* Наследуем цвет текста */
   cursor: pointer; /* Меняем курсор при наведении */
   outline: none; /* Убираем стандартный outline, можно задать собственный */
   -webkit-appearance: none; /* Убираем стандартный вид для WebKit */
@@ -68,15 +68,15 @@
 }
 
 .header__theme-menu-button:hover:not(:focus) {
-  outline: 1px solid #ff007080; /* Обводка при наведении */
+  outline: 1px solid var(--hover-accent-color); /* Обводка при наведении */
 }
 
 .header__theme-menu-button:focus {
-  box-shadow: 0 1px 0 #ff007f;
+  box-shadow: 0 1px 0 var(--focus-accent-color);
 }
 
 .header__theme-menu-button.header__theme-menu-button_active {
-  outline: 1px solid #ff0070; /* Обводка активного элемента */
+  outline: 1px solid var(--active-accent-color); /* Обводка активного элемента */
 }
 
 .header__theme-menu-button:disabled {
@@ -108,7 +108,7 @@
 }
 
 .title-decor {
-  background-color: #ff0070;
+  background-color: var(--accent-color);
 }
 
 .header__text-paragraph {
@@ -116,7 +116,7 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 23.4px;
-  color: black;
+  color: var(--article-title-color);
   text-align: left;
 }
 
@@ -134,7 +134,7 @@
 .header__corner_type_top-right::after {
   content: "";
   position: absolute;
-  background-color: #ff0070;
+  background-color: var(--corner-color);
 }
 
 /* Горизонтальная полоска */
@@ -163,7 +163,7 @@
 .header__corner_type_bottom-left::after {
   content: "";
   position: absolute;
-  background-color: #ff0070;
+  background-color: var(--corner-color);
 }
 
 /* Горизонтальная полоска */
@@ -189,7 +189,9 @@
   background-size: cover; /* Растягиваем на весь экран */
   background-repeat: no-repeat; /* Отключаем повторение */
   background-attachment: fixed; /* Фиксируем фон */
-  background-color: #000028; /* Цвет фона, если изображение не загрузилось */
+  background-color: var(
+    --background-color
+  ); /* Цвет фона, если изображение не загрузилось */
 }
 
 .content {
@@ -211,7 +213,7 @@
   font-weight: 700;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23px;
-  color: #ff0070;
+  color: var(--accent-color);
 }
 
 .content__article {
@@ -225,7 +227,7 @@
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   font-style: normal;
   font-weight: 700;
-  color: #000028;
+  color: var(--article-title-color);
 }
 
 .content__article-text {
@@ -233,8 +235,22 @@
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   font-style: normal;
   font-weight: 400;
-  color: #f1b2ce;
+  color: var(--text-color);
   line-height: 23.42px;
+}
+
+.content__article-link {
+  outline: none;
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.content__article-link:hover {
+  box-shadow: 0 1px 0 var(--text-color);
+}
+
+.content__article-link:focus-visible {
+  outline: 1px solid var(--text-color);
 }
 
 .content__images-gallery {
@@ -285,7 +301,7 @@
 .footer__corner_type_top-right::after {
   content: "";
   position: absolute;
-  background-color: #ff0070;
+  background-color: var(--corner-color);
 }
 
 /* Горизонтальная полоска */
@@ -314,7 +330,7 @@
 .footer__corner_type_bottom-left::after {
   content: "";
   position: absolute;
-  background-color: #ff0070;
+  background-color: var(--corner-color);
 }
 
 /* Горизонтальная полоска */

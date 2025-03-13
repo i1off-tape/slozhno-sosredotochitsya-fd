@@ -4,6 +4,14 @@
 */
 :root {
   --accent-color: #ff0070;
+  --nav-text-color: #ff0070;
+  --hover-accent-color: #ff007080;
+  --active-accent-color: #ff0070;
+  --focus-accent-color: #ff0070;
   --title-color: #db00ff;
+  --background-color: #000028;
+  --text-color: #f1b2ce;
+  --article-title-color: #000028;
   --background-image: url("../images/cover-image-dark.png");
+  --corner-color: #ff0070;
 }
