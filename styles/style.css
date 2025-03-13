@@ -19,7 +19,7 @@
 
 .header__lamp-text {
   font-family: var(--font-family);
-  font-size: var(--font-size-text-universal);
+  font-size: var(--font-size-mobile);
   color: var(--accent-color);
   margin: 1px 2px 0 0;
 }
@@ -58,7 +58,7 @@
   background: none; /* Убираем фоновый цвет */
   border: none; /* Убираем рамку */
   margin: 0; /* Сбрасываем внешние отступы */
-  padding: 0 13px; /* Сбрасываем внутренние отступы */
+  padding: 0 11px; /* Сбрасываем внутренние отступы */
   font: inherit; /* Наследуем шрифт родительского элемента */
   color: var(--nav-text-color); /* Наследуем цвет текста */
   cursor: pointer; /* Меняем курсор при наведении */
@@ -88,7 +88,7 @@
 
 .header__title {
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--font-size-title-mobile);
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
   font-weight: 700;
@@ -109,8 +109,8 @@
 }
 
 .header__text-paragraph {
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-text-universal);
   font-weight: bold;
   line-height: 23.4px;
   color: var(--article-title-color);
@@ -204,10 +204,10 @@
 }
 
 .content__title {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-size: var(--font-size-text-universal);
   line-height: 23px;
   color: var(--accent-content-color);
 }
@@ -219,16 +219,16 @@
 }
 
 .content__article-title {
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-family: var(--font-family);
+  font-size: var(--font-size-text-universal);
   font-style: normal;
   font-weight: 700;
   color: var(--article-title-color);
 }
 
 .content__article-text {
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-family: var(--font-family);
+  font-size: var(--font-size-text-universal);
   font-style: normal;
   font-weight: 400;
   color: var(--text-color);
@@ -275,8 +275,8 @@
 }
 
 .footer__title {
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-family: var(--font-family);
+  font-size: var(--font-size-title-mobile);
   text-shadow: 2px 2px 0 var(--accent-color);
   color: var(--title-color);
   font-weight: 700;
