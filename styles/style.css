@@ -77,10 +77,7 @@
 
 .header__theme-menu-button.header__theme-menu-button_active {
   outline: 1px solid var(--active-accent-color); /* Обводка активного элемента */
-}
-
-.header__theme-menu-button:disabled {
-  cursor: default;
+  pointer-events: none;
 }
 
 .header__theme-menu-button {

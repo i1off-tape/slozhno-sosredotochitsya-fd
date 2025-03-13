@@ -16,3 +16,26 @@
   --background-image: url("../images/cover-image-dark.png");
   --corner-color: #ff0070;
 }
+
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-dark):not(.theme-light) {
+    --accent-color: #ff8dcb;
+    --accent-content-color: #353430;
+    --nav-text-color: #353430;
+    --hover-accent-color: #35343066;
+    --active-accent-color: #353430;
+    --focus-accent-color: #353430;
+    --title-color: #ffc2e6;
+    --background-color: #ffffff;
+    --text-color: #353430;
+    --article-title-color: #353430;
+    --background-image: url("../images/cover-image.png");
+    --corner-color: #353430;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-dark):not(.theme-light) .header__lamp {
+    visibility: hidden;
+  }
+}
