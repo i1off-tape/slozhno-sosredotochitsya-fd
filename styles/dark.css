@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff0070;
+  --accent-content-color: #ff0070;
   --nav-text-color: #ff0070;
   --hover-accent-color: #ff007080;
   --active-accent-color: #ff0070;

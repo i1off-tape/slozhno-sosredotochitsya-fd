@@ -213,7 +213,7 @@
   font-weight: 700;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23px;
-  color: var(--accent-color);
+  color: var(--accent-content-color);
 }
 
 .content__article {
