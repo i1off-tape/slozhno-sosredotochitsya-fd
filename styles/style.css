@@ -24,6 +24,49 @@
   }
 }
 
+/* --- Общий стиль для header и footer (оформление углов) --- */
+.decorated-zone {
+  position: relative;
+}
+
+/* --- Верхний правый угол --- */
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+  margin: 10px; /* Отступ до 768px */
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::before {
+    margin: 20px; /* Отступ после 768px */
+  }
+}
+
+/* --- Нижний левый угол --- */
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+  margin: 10px; /* Отступ до 768px */
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::after {
+    margin: 20px; /* Отступ после 768px */
+  }
+}
+
 /* --- Элемент: header__lamp --- */
 
 .header__lamp {
@@ -187,74 +230,6 @@
   font-size: var(--font-size-text-universal);
   line-height: 23.4px;
   text-align: left;
-}
-
-/* --- Углы header --- */
-
-.header__corner {
-  position: absolute;
-  margin: 10px;
-}
-
-@media (min-width: 768px) {
-  .header__corner {
-    margin: 20px;
-  }
-}
-
-/* Угол: верхний правый */
-
-.header__corner_type_top-right {
-  top: 0;
-  right: 0;
-}
-
-.header__corner_type_top-right::before,
-.header__corner_type_top-right::after {
-  content: "";
-  position: absolute;
-  background-color: var(--corner-color);
-}
-
-.header__corner_type_top-right::before {
-  top: 0;
-  right: 0;
-  width: 25px;
-  height: 1px;
-}
-
-.header__corner_type_top-right::after {
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 25px;
-}
-
-/* Угол: нижний левый */
-.header__corner_type_bottom-left {
-  bottom: 0;
-  left: 0;
-}
-
-.header__corner_type_bottom-left::before,
-.header__corner_type_bottom-left::after {
-  content: "";
-  position: absolute;
-  background-color: var(--corner-color);
-}
-
-.header__corner_type_bottom-left::before {
-  bottom: 0;
-  left: 0;
-  width: 25px;
-  height: 1px;
-}
-
-.header__corner_type_bottom-left::after {
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  height: 25px;
 }
 
 /* ========================================================================= */
@@ -505,72 +480,4 @@
   .footer__title {
     font-size: var(--font-size-title-pc);
   }
-}
-
-/* --- Углы footer --- */
-
-.footer__corner {
-  position: absolute;
-  margin: 10px;
-}
-
-@media (min-width: 768px) {
-  .footer__corner {
-    margin: 20px;
-  }
-}
-
-/* Угол: верхний правый */
-
-.footer__corner_type_top-right {
-  top: 0;
-  right: 0;
-}
-
-.footer__corner_type_top-right::before,
-.footer__corner_type_top-right::after {
-  content: "";
-  position: absolute;
-  background-color: var(--corner-color);
-}
-
-.footer__corner_type_top-right::before {
-  top: 0;
-  right: 0;
-  width: 25px;
-  height: 1px;
-}
-
-.footer__corner_type_top-right::after {
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 25px;
-}
-
-/* --- Уголок в нижнем левом углу --- */
-.footer__corner_type_bottom-left {
-  bottom: 0;
-  left: 0;
-}
-
-.footer__corner_type_bottom-left::before,
-.footer__corner_type_bottom-left::after {
-  content: "";
-  position: absolute;
-  background-color: var(--corner-color);
-}
-
-.footer__corner_type_bottom-left::before {
-  bottom: 0;
-  left: 0;
-  width: 25px;
-  height: 1px;
-}
-
-.footer__corner_type_bottom-left::after {
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  height: 25px;
 }
