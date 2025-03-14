@@ -1,14 +1,21 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* ========================================================================= */
+/* Header Block                                                             */
+/* ========================================================================= */
+
+/* Базовые стили для .header */
+
 .header {
+  position: relative;
   display: grid;
-  padding: 10px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  position: relative;
-  height: 100vh;
   width: 100%;
   max-width: 100%;
+  height: 100vh;
+  min-height: 375px;
+  padding: 10px;
 }
 
 @media (min-width: 768px) {
@@ -17,13 +24,15 @@
   }
 }
 
+/* --- Элемент: header__lamp --- */
+
 .header__lamp {
   position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
-  gap: 10px;
   justify-self: end;
+  gap: 10px;
   padding-inline-end: 10px;
 }
 
@@ -35,33 +44,35 @@
 }
 
 .header__lamp-text {
+  color: var(--accent-color);
   font-family: var(--font-family);
   font-size: var(--font-size-text-universal);
-  color: var(--accent-color);
 }
 
 .header__lamp-dot {
-  background-color: var(--accent-color);
   width: 9px;
   height: 9px;
+  margin: 8px 0 0 0;
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--accent-color);
-  margin: 8px 0 0 0;
+  background-color: var(--accent-color);
 }
+
+/* --- Элемент: header__theme-menu --- */
 
 .header__theme-menu {
   grid-row: 1;
+  justify-self: end;
+  align-self: center;
   font-family: var(--font-family);
   font-size: var(--font-size-text-universal);
   line-height: 23px;
-  justify-self: end;
-  align-self: center;
 }
 
 @media (min-width: 1024px) {
   .header__theme-menu {
-    align-self: flex-start;
     justify-self: center;
+    align-self: flex-start;
   }
 }
 
@@ -85,48 +96,56 @@
   align-items: center;
 }
 
+/* Базовые стили для кнопок меню */
+
 .header__theme-menu-item button {
-  background: none; /* Убираем фоновый цвет */
-  border: none; /* Убираем рамку */
-  margin: 0; /* Сбрасываем внешние отступы */
-  padding: 0 11px; /* Сбрасываем внутренние отступы */
-  font: inherit; /* Наследуем шрифт родительского элемента */
-  color: var(--nav-text-color); /* Наследуем цвет текста */
-  cursor: pointer; /* Меняем курсор при наведении */
-  outline: none; /* Убираем стандартный outline, можно задать собственный */
-  -webkit-appearance: none; /* Убираем стандартный вид для WebKit */
-  -moz-appearance: none; /* Убираем стандартный вид для Mozilla */
+  margin: 0;
+  border: none;
+  padding: 0 11px;
+  outline: none;
+  color: var(--nav-text-color);
+  font: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
+/* Состояния кнопок */
+
 .header__theme-menu-button:hover:not(:focus) {
-  outline: 1px solid var(--hover-accent-color); /* Обводка при наведении */
+  outline: 1px solid var(--hover-accent-color);
 }
 
 .header__theme-menu-button:focus {
   box-shadow: 0 1px 0 var(--focus-accent-color);
 }
 
+/* Модификатор активного состояния */
+
 .header__theme-menu-button.header__theme-menu-button_active {
-  outline: 1px solid var(--active-accent-color); /* Обводка активного элемента */
+  outline: 1px solid var(--active-accent-color);
   pointer-events: none;
 }
 
 .header__theme-menu-button {
-  text-transform: lowercase;
   padding: 0px 13px;
   letter-spacing: 0.05rem;
+  text-transform: lowercase;
 }
+
+/* --- Заголовок и текст header --- */
 
 .header__title {
   grid-row: 2;
-  font-family: var(--font-family);
-  font-size: var(--font-size-title-mobile);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  color: var(--title-color);
-  font-weight: 700;
-  text-align: left;
   justify-self: start;
+  color: var(--title-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--font-size-title-mobile);
   line-height: 82.5%;
+  text-align: left;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (min-width: 768px) {
@@ -153,9 +172,11 @@
   }
 }
 
+/* --- Декор: title-decor --- */
+
 .title-decor {
-  background-color: var(--accent-color);
   width: 100%;
+  background-color: var(--accent-color);
 }
 
 @media (min-width: 768px) {
@@ -165,13 +186,15 @@
 }
 
 .header__text-paragraph {
-  font-family: var(--font-family);
-  font-size: var(--font-size-text-universal);
-  font-weight: bold;
-  line-height: 23.4px;
   color: var(--article-title-color);
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: var(--font-size-text-universal);
+  line-height: 23.4px;
   text-align: left;
 }
+
+/* --- Углы header --- */
 
 .header__corner {
   position: absolute;
@@ -183,6 +206,8 @@
     margin: 20px;
   }
 }
+
+/* Угол: верхний правый */
 
 .header__corner_type_top-right {
   top: 0;
@@ -196,23 +221,21 @@
   background-color: var(--corner-color);
 }
 
-/* Горизонтальная полоска */
 .header__corner_type_top-right::before {
-  width: 25px; /* длина полоски */
-  height: 1px; /* толщина */
   top: 0;
   right: 0;
+  width: 25px;
+  height: 1px;
 }
 
-/* Вертикальная полоска */
 .header__corner_type_top-right::after {
+  top: 0;
+  right: 0;
   width: 1px;
   height: 25px;
-  top: 0;
-  right: 0;
 }
 
-/* --- Уголок в нижнем левом углу --- */
+/* Угол: нижний левый */
 .header__corner_type_bottom-left {
   bottom: 0;
   left: 0;
@@ -225,32 +248,36 @@
   background-color: var(--corner-color);
 }
 
-/* Горизонтальная полоска */
 .header__corner_type_bottom-left::before {
+  bottom: 0;
+  left: 0;
   width: 25px;
   height: 1px;
-  bottom: 0;
-  left: 0;
 }
 
-/* Вертикальная полоска */
 .header__corner_type_bottom-left::after {
+  bottom: 0;
+  left: 0;
   width: 1px;
   height: 25px;
-  bottom: 0;
-  left: 0;
 }
 
+/* ========================================================================= */
+/* Page Block                                                               */
+/* ========================================================================= */
+
 .page {
+  background-color: var(--background-color);
   background-image: var(--background-image);
-  background-position: center; /* Центрируем изображение */
-  background-size: cover; /* Растягиваем на весь экран */
-  background-repeat: no-repeat; /* Отключаем повторение */
-  background-attachment: fixed; /* Фиксируем фон */
-  background-color: var(
-    --background-color
-  ); /* Цвет фона, если изображение не загрузилось */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+/* ========================================================================= */
+/* Content Block                                                            */
+/* ========================================================================= */
 
 .content {
   display: flex;
@@ -261,10 +288,12 @@
 
 @media (min-width: 768px) {
   .content {
-    margin: 60px 20px;
     gap: 80px;
+    margin: 60px 20px;
   }
 }
+
+/* --- Секции контента --- */
 
 .content__section {
   display: flex;
@@ -279,23 +308,27 @@
     gap: 20px;
   }
 
-  .content__section:nth-child(2) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .content__section:nth-child(4) {
     grid-template-columns: 1fr;
   }
 }
 
+@media (min-width: 1024px) {
+  .content__section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* --- Заголовки секций --- */
+
 .content__title {
   grid-column: 1;
+  color: var(--accent-content-color);
   font-family: var(--font-family);
-  font-style: normal;
   font-weight: 700;
   font-size: var(--font-size-text-universal);
+  font-style: normal;
   line-height: 23px;
-  color: var(--accent-content-color);
 }
 
 @media (min-width: 768px) {
@@ -313,6 +346,8 @@
     max-width: 300px;
   }
 }
+
+/* --- Статьи контента --- */
 
 .content__article {
   display: flex;
@@ -335,44 +370,50 @@
 }
 
 @media (min-width: 1024px) {
+  .content__article {
+    grid-column: 2 / 4;
+  }
+
   .content__section:nth-child(2) .content__article:nth-child(2) {
-    grid-column: 1; /* Растягиваем статьи на всю ширину */
+    grid-column: 1;
   }
 
   .content__section:nth-child(2) .content__article:nth-child(3) {
-    grid-column: 2; /* Растягиваем статьи на всю ширину */
+    grid-column: 2;
   }
 
   .content__section:nth-child(2) .content__article:nth-child(4) {
-    grid-column: 3; /* Растягиваем статьи на всю ширину */
+    grid-column: 3;
   }
 }
 
 .content__article-title {
+  color: var(--article-title-color);
   font-family: var(--font-family);
+  font-weight: 700;
   font-size: var(--font-size-text-universal);
   font-style: normal;
-  font-weight: 700;
-  color: var(--article-title-color);
 }
 
 .content__article-text {
+  color: var(--text-color);
   font-family: var(--font-family);
+  font-weight: 400;
   font-size: var(--font-size-text-universal);
   font-style: normal;
-  font-weight: 400;
-  color: var(--text-color);
   line-height: 23.42px;
 }
 
 .content__span-title {
+  margin-bottom: 10px;
+  color: var(--article-title-color);
   font-family: var(--font-family);
+  font-weight: 700;
   font-size: var(--font-size-text-universal);
   font-style: normal;
-  font-weight: 700;
-  color: var(--article-title-color);
-  margin-bottom: 10px;
 }
+
+/* --- ссылки из контента --- */
 
 .content__article-link {
   outline: none;
@@ -388,54 +429,50 @@
   outline: 1px solid var(--text-color);
 }
 
+/* --- Галерея изображений --- */
+
 .content__images-gallery {
   display: grid;
   grid-template-columns: 1fr; /* Одна колонка по умолчанию */
-  gap: 10px; /* Расстояние между изображениями */
+  gap: 10px;
   width: 100%;
-  max-width: 1024px; /* Ограничиваем ширину */
-  margin: 0 auto; /* Центрируем */
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .content__images-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
     gap: 20px;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-    grid-template-rows: auto auto auto;
     max-width: 1024px;
   }
 
-  /* Заголовок занимает всю ширину */
   .content__images-gallery .title-decor {
     grid-column: span 3;
   }
 
-  /* Закат (2 колонки) */
   .content__images-gallery img:nth-child(2) {
     grid-column: 1 / 3;
     grid-row: 2;
   }
 
-  /* Мороженое (1 колонка) */
   .content__images-gallery img:nth-child(3) {
     grid-column: 3;
     grid-row: -3 / -1;
   }
 
-  /* Кассета (1 колонка) */
   .content__images-gallery img:nth-child(4) {
     grid-column: 1;
     grid-row: 3 / 5;
   }
 
-  /* Книги (1 колонка) */
   .content__images-gallery img:nth-child(5) {
     grid-column: 2;
     grid-row: 3 / 4;
   }
 
-  /* Улица (2 колонки) */
   .content__images-gallery img:nth-child(6) {
     grid-column: 2 / 4;
   }
@@ -443,32 +480,30 @@
 
 .content__images-gallery img {
   width: 100%; /* Заполняет родительскую колонку */
-  height: auto;
+  height: 100%;
   object-fit: cover; /* Обрезает края, если нужно */
 }
 
-@media (min-width: 768px) {
-  .content__images-gallery img {
-    height: 100%; /* Заполняет родительскую строку */
-  }
-}
+/* ========================================================================= */
+/* Footer Block                                                             */
+/* ========================================================================= */
 
 .footer {
+  position: relative;
   display: grid;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 375px;
 }
 
 .footer__title {
-  font-family: var(--font-family);
-  font-size: var(--font-size-title-mobile);
-  text-shadow: 2px 2px 0 var(--accent-color);
   color: var(--title-color);
+  font-family: var(--font-family);
   font-weight: 700;
+  font-size: var(--font-size-title-mobile);
   text-align: center;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (min-width: 1024px) {
@@ -476,6 +511,8 @@
     font-size: var(--font-size-title-pc);
   }
 }
+
+/* --- Углы footer --- */
 
 .footer__corner {
   position: absolute;
@@ -487,6 +524,8 @@
     margin: 20px;
   }
 }
+
+/* Угол: верхний правый */
 
 .footer__corner_type_top-right {
   top: 0;
@@ -500,20 +539,18 @@
   background-color: var(--corner-color);
 }
 
-/* Горизонтальная полоска */
 .footer__corner_type_top-right::before {
-  width: 25px; /* длина полоски */
-  height: 1px; /* толщина */
   top: 0;
   right: 0;
+  width: 25px;
+  height: 1px;
 }
 
-/* Вертикальная полоска */
 .footer__corner_type_top-right::after {
-  width: 1px;
-  height: 25px;
   top: 0;
   right: 0;
+  width: 1px;
+  height: 25px;
 }
 
 /* --- Уголок в нижнем левом углу --- */
@@ -529,18 +566,16 @@
   background-color: var(--corner-color);
 }
 
-/* Горизонтальная полоска */
 .footer__corner_type_bottom-left::before {
+  bottom: 0;
+  left: 0;
   width: 25px;
   height: 1px;
-  bottom: 0;
-  left: 0;
 }
 
-/* Вертикальная полоска */
 .footer__corner_type_bottom-left::after {
-  width: 1px;
-  height: 25px;
   bottom: 0;
   left: 0;
+  width: 1px;
+  height: 25px;
 }
