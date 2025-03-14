@@ -315,12 +315,8 @@
 }
 
 @media (min-width: 1024px) {
-  .content__section {
+  .content__section:not(.content__section_layout_images) {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .content__section_layout_images {
-    grid-template-columns: 1fr;
   }
 }
 
