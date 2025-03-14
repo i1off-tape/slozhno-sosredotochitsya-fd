@@ -1,0 +1,36 @@
+{
+	"workbench.settings.applyToAllProfiles": [],
+	"workbench.settings.editor": "json",
+	"cSpell.language": "en,ru",
+	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"prettier.semi": false,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.arrowParens": "avoid",
+	"workbench.colorTheme": "GitHub Dark",
+	"editor.fontSize": 18,
+	"terminal.integrated.fontSize": 16,
+	"editor.wordWrap": "on",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"editor.tabSize": 2, // размер таба
+	"editor.formatOnSave": true, // форматировать код при сохранении
+	"explorer.compactFolders": false, // компактные папки
+	"editor.smoothScrolling": true, // плавный скролл
+	"workbench.list.smoothScrolling": true, // плавный скролл
+	"terminal.integrated.smoothScrolling": true, // плавный скролл в терминале
+	"editor.cursorBlinking": "expand", // мигающей курсор
+	"terminal.integrated.cursorBlinking": true, // мигающей курсор
+	"editor.glyphMargin": false,
+	"editor.linkedEditing": true,
+	"editor.padding.top": 15,
+	"workbench.iconTheme": "material-icon-theme", // отступ сверху кода
+	"http.proxySupport": "fallback",
+	"editor.fontFamily": "JetBrains Mono",
+	"editor.fontLigatures": true,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"git.confirmSync": false
+}
