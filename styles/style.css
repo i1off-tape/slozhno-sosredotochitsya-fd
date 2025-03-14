@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 100%;
   height: 100vh;
-  min-height: 375px;
+  min-height: 668px;
   padding: 10px;
 }
 
@@ -151,11 +151,6 @@
 @media (min-width: 768px) {
   .header__title {
     margin-inline-start: -20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header__title {
     font-size: var(--font-size-title-pc);
   }
 }
@@ -506,7 +501,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .footer__title {
     font-size: var(--font-size-title-pc);
   }

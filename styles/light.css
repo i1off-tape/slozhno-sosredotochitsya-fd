@@ -8,6 +8,29 @@
   visibility: hidden;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --accent-content-color: #353430;
+    --nav-text-color: #353430;
+    --hover-accent-color: #35343066;
+    --active-accent-color: #353430;
+    --focus-accent-color: #353430;
+    --title-color: #ffc2e6;
+    --background-color: #fff1f7;
+    --text-color: #353430;
+    --article-title-color: #353430;
+    --background-image: url("../images/cover-image-light.png");
+    --corner-color: #353430;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root .header__lamp {
+    visibility: hidden;
+  }
+}
+
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
