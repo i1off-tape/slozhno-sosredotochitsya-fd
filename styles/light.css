@@ -4,12 +4,12 @@
   переключая тему
 */
 
-.theme-light .header__lamp {
+.theme-light .header__rec {
   visibility: hidden;
 }
 
 @media (prefers-color-scheme: light) {
-  :root .header__lamp {
+  :root .header__rec {
     visibility: hidden;
   }
 }
