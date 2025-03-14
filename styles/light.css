@@ -9,6 +9,12 @@
 }
 
 @media (prefers-color-scheme: light) {
+  :root .header__lamp {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
     --accent-content-color: #353430;
@@ -22,12 +28,6 @@
     --article-title-color: #353430;
     --background-image: url("../images/cover-image-light.png");
     --corner-color: #353430;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root .header__lamp {
-    visibility: hidden;
   }
 }
 
@@ -46,10 +46,6 @@
   --text-color: #353430;
   --article-title-color: #353430;
   --corner-color: #353430;
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
   --background-image: url("../images/cover-image-light.png");
   --background-color: #fff1f7;
 }
