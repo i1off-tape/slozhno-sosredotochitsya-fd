@@ -14,14 +14,13 @@
 @media (min-width: 768px) {
   .header {
     padding: 20px;
-    grid-template-rows: auto 245px 1fr 280px;
+    grid-template-rows: auto auto auto auto;
   }
 }
 
 .header__lamp {
   grid-row: 1;
   display: flex;
-  align-items: center;
   gap: 10px;
   justify-self: end;
   padding-inline-end: 10px;
@@ -49,12 +48,6 @@
   line-height: 23px;
   justify-self: end;
   padding-block-start: 41px;
-}
-
-@media (min-width: 768px) {
-  .header__theme-menu {
-    align-self: end;
-  }
 }
 
 .header__theme-menu-list {
@@ -104,7 +97,7 @@
 
 .header__title {
   grid-row: 3;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   font-size: var(--font-size-title-mobile);
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
@@ -112,26 +105,24 @@
   text-align: left;
   justify-self: start;
   line-height: 82.5%;
-  padding-block-start: 69px;
+  padding-block-start: 70px;
 }
 
 @media (min-width: 768px) {
   .header__title {
-    padding-block-start: 176px;
+    min-height: 22vh;
     margin-inline-start: -20px;
   }
 }
 
 .header__text {
   grid-row: 4;
-  justify-self: flex-start;
   padding-block-end: 56px;
   max-height: 68%;
 }
 
 @media (min-width: 768px) {
   .header__text {
-    display: inline-block;
     justify-self: end;
     padding-inline-end: 62px;
     max-height: 41%;
