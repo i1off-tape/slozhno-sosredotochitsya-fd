@@ -168,6 +168,9 @@
 /* Состояния кнопок */
 
 .header__theme-menu-button {
+  padding: 0px 13px;
+  letter-spacing: 0.05rem;
+  text-transform: lowercase;
   transition: outline 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -184,12 +187,6 @@
 .header__theme-menu-button.header__theme-menu-button_active {
   outline: 1px solid var(--active-accent-color);
   pointer-events: none;
-}
-
-.header__theme-menu-button {
-  padding: 0px 13px;
-  letter-spacing: 0.05rem;
-  text-transform: lowercase;
 }
 
 /* --- Заголовок и текст header --- */
