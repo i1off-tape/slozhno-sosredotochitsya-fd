@@ -281,7 +281,7 @@
     grid-template-columns: 1fr;
   }
 
-  .content__section_layout_three-columns {
+  .content__section_layout_columns {
     grid-template-columns: 1fr;
   }
 }
@@ -291,7 +291,7 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .content__section_layout_three-columns {
+  .content__section_layout_columns {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto; /* Автоматическая высота строк */
     grid-auto-rows: auto; /* Автоматическое создание новых строк */
@@ -316,14 +316,14 @@
     grid-column: 1;
   }
 
-  .content__section_layout_three-columns .content__title {
+  .content__section_layout_columns .content__title {
     max-width: 150px;
     grid-column: span 1;
   }
 }
 
 @media (min-width: 1024px) {
-  .content__section_layout_three-columns .content__title {
+  .content__section_layout_columns .content__title {
     max-width: 300px;
     grid-column: span 3; /* Растягивается на 3 колонки */
     grid-row: 1; /* Остаётся в первой строке */
@@ -347,7 +347,7 @@
     grid-column: 2;
   }
 
-  .content__section_layout_three-columns .content__article {
+  .content__section_layout_columns .content__article {
     grid-column: span 1; /* Каждая статья занимает всю ширину */
   }
 }
@@ -357,7 +357,7 @@
     grid-column: 2 / 4;
   }
 
-  .content__section_layout_three-columns .content__article {
+  .content__section_layout_columns .content__article {
     grid-column: span 1; /* Каждая статья занимает 1 колонку */
   }
 }
